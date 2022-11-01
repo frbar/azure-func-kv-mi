@@ -1,6 +1,11 @@
 # Purpose
 
-This repository contains a Bicep template to setup an Azure Function (consumption plan, Linux), a Key Vault, and one reference to it in the function's App Configuration, to reproduce the issue https://github.com/Azure/Azure-Functions/issues/2248.
+This repository contains a Bicep template to setup:
+- an Azure Function (consumption plan, Linux), 
+- a Key Vault,
+- an Application Settings using a Key Vault reference
+
+This is to reproduce the issue tracked here: https://github.com/Azure/Azure-Functions/issues/2248.
 
 # Deploy the infrastructure
 
