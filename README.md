@@ -18,8 +18,8 @@ $subscription = "My Subscription"
 az account set --subscription $subscription
 
 $location     = "West Europe"
-$kind         = "linux"            # or windows
-$rgName       = "frbar-2248-$kind" # Name of the resource group where to deploy
+$kind         = "linux"              # or windows
+$rgName       = "frbar-2248-$kind"   # Name of the resource group where to deploy
 
 az group create --name $rgName --location $location
 az deployment group create --resource-group $rgName --template-file infra.bicep --mode complete --parameters kind=$kind

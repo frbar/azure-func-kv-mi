@@ -17,7 +17,7 @@ param demoSecretValue string = newGuid()
 
 var functionAppName = appName
 var hostingPlanName = appName
-param fxVersion string = 'NODE|16-LTS'
+param fxVersion string = 'Node|16'
 param storageAccountType string = 'Standard_LRS'
 var keyVaultName = appName
 var secretName = 'SecretForMyFunction'
@@ -152,7 +152,7 @@ resource functionApp 'Microsoft.Web/sites@2021-03-01' = {
       minTlsVersion: '1.2'
       linuxFxVersion: (kind == 'linux' ? fxVersion : null)
       windowsFxVersion: (kind == 'windows' ? fxVersion : null)
-      netFrameworkVersion: (kind == 'windows' ? 'v6.0' : null)
+      netFrameworkVersion: (kind == 'windows' ? 'v6.0' : 'v4.0')
       remoteDebuggingVersion: (kind == 'windows' ? 'VS2019' : null)
     }
     httpsOnly: true
